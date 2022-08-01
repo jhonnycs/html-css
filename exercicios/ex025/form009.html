@@ -10,11 +10,23 @@
     <h1>Formzin</h1>
     <form action="" method="get">
 
+        
+        <p>
+            <label for="irange">Valor: </label>
+            <input type="range" name="range" id="irange" oninput="val.innerHTML=Number(irange.value)">
+            <output id="val"></output>
+        </p>
 
         <p>
             <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+            <input type="reset" value="Limpar" onclick="clean()">
         </p>
     </form>
+
+    <script>
+        function clean() {
+            val.innerHTML = ""
+        }
+    </script>
 </body>
 </html>
