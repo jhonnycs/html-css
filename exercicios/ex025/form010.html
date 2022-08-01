@@ -12,7 +12,9 @@
 
         <p>
             <label for="iano">Digite o ano: </label>
-            <input type="number" name="ano" id="iano" oninput="calc()">
+            <input type="number" name="ano" id="iano" oninput="calc()" max="2022"> <br>
+            <label for="idade">Idade: </label>
+            <output id="idade"></output>
         </p>
 
         <p>
@@ -23,7 +25,11 @@
 
     <script>
         function calc() {
-            
+            let anoAtual = new Date().getFullYear()
+            idade.innerHTML = anoAtual - Number(iano.value)
+        }
+        function clean() {
+            idade.innerHTML = ""
         }
     </script>
 </body>
