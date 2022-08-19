@@ -41,4 +41,6 @@ img {
     margin: auto;
 }
 
-#tablet, #print, #pc, #tv {display: none;}
+#tablet, #print, #pc, #tv { display: none; }
+#phone { display: block; }
+
